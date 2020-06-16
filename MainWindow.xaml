@@ -9,11 +9,11 @@
 
     <Window.CommandBindings>
         <CommandBinding Command="Open" Executed="OpenExecuted" />
-        <CommandBinding Command="NextPage" Executed="NextPageExecuted" />
-        <CommandBinding Command="PreviousPage" Executed="PreviousPageExecuted" />
+        <CommandBinding Command="NextPage" CanExecute="NextPageCanExecute" Executed="NextPageExecuted" />
+        <CommandBinding Command="PreviousPage" CanExecute="PreviousPageCanExecute" Executed="PreviousPageExecuted" />
         <CommandBinding Command="GoToPage" Executed="GoToPageExecuted" />
-        <CommandBinding Command="FirstPage" Executed="FirstPageExecuted" />
-        <CommandBinding Command="LastPage" Executed="LastPageExecuted" />
+        <CommandBinding Command="FirstPage" CanExecute="PreviousPageCanExecute" Executed="FirstPageExecuted" />
+        <CommandBinding Command="LastPage" CanExecute="NextPageCanExecute" Executed="LastPageExecuted" />
     </Window.CommandBindings>
 
     <Window.InputBindings>

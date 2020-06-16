@@ -49,21 +49,17 @@ namespace Sans
             }
         }
 
-        private void NextPageExecuted(object sender, ExecutedRoutedEventArgs e)
-        {
-            if (this.ComicVM.PageNumber < this.ComicVM.PageCount)
-            {
-                this.ComicVM.PageNumber++;
-            }
-        }
+        private void NextPageCanExecute(object sender, CanExecuteRoutedEventArgs e) =>
+            e.CanExecute = this.ComicVM.PageNumber < this.ComicVM.PageCount;
 
-        private void PreviousPageExecuted(object sender, ExecutedRoutedEventArgs e)
-        {
-            if (this.ComicVM.PageNumber > 1)
-            {
-                this.ComicVM.PageNumber--;
-            }
-        }
+        private void NextPageExecuted(object sender, ExecutedRoutedEventArgs e) =>
+            this.ComicVM.PageNumber++;
+
+        private void PreviousPageCanExecute(object sender, CanExecuteRoutedEventArgs e) =>
+            e.CanExecute = this.ComicVM.PageNumber > 1;
+
+        private void PreviousPageExecuted(object sender, ExecutedRoutedEventArgs e) =>
+            this.ComicVM.PageNumber--;
 
         private void GoToPageExecuted(object sender, ExecutedRoutedEventArgs e)
         {
