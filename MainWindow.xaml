@@ -28,16 +28,16 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
-                <MenuItem Command="Open" />
-                <MenuItem Command="sans:Commands.Exit" />
+                <MenuItem Command="Open" Header="_Open..." />
+                <MenuItem Command="sans:Commands.Exit" Header="E_xit" />
             </MenuItem>
 
             <MenuItem Header="_Go">
-                <MenuItem Command="NextPage" InputGestureText="Page Down" />
-                <MenuItem Command="PreviousPage" InputGestureText="Page Up" />
-                <MenuItem Command="GoToPage" InputGestureText="Ctrl+G" />
-                <MenuItem Command="FirstPage" InputGestureText="Home" />
-                <MenuItem Command="LastPage" InputGestureText="End" />
+                <MenuItem Command="NextPage" Header="_Next Page" InputGestureText="Page Down" />
+                <MenuItem Command="PreviousPage" Header="_Previous Page" InputGestureText="Page Up" />
+                <MenuItem Command="GoToPage" Header="_Go To Page..." InputGestureText="Ctrl+G" />
+                <MenuItem Command="FirstPage" Header="_First Page" InputGestureText="Home" />
+                <MenuItem Command="LastPage" Header="_Last Page" InputGestureText="End" />
             </MenuItem>
         </Menu>
 
