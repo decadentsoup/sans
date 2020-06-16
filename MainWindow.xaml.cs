@@ -49,6 +49,9 @@ namespace Sans
             }
         }
 
+        private void ExitExecuted(object sender, ExecutedRoutedEventArgs e) =>
+            this.Close();
+
         private void NextPageCanExecute(object sender, CanExecuteRoutedEventArgs e) =>
             e.CanExecute = this.ComicVM.PageNumber < this.ComicVM.PageCount;
 

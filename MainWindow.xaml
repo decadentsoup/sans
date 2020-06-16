@@ -9,6 +9,7 @@
 
     <Window.CommandBindings>
         <CommandBinding Command="Open" Executed="OpenExecuted" />
+        <CommandBinding Command="sans:Commands.Exit" Executed="ExitExecuted" />
         <CommandBinding Command="NextPage" CanExecute="NextPageCanExecute" Executed="NextPageExecuted" />
         <CommandBinding Command="PreviousPage" CanExecute="PreviousPageCanExecute" Executed="PreviousPageExecuted" />
         <CommandBinding Command="GoToPage" Executed="GoToPageExecuted" />
@@ -28,6 +29,7 @@
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
                 <MenuItem Command="Open" />
+                <MenuItem Command="sans:Commands.Exit" />
             </MenuItem>
 
             <MenuItem Header="_Go">
